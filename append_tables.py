@@ -8,7 +8,7 @@ output_folder = "tables_Nguyenlowmass_Costahighmass"
 os.makedirs(output_folder, exist_ok=True)
 
 # Target folder for low mass tables
-target_folder_low_mass = "tables_Nguyen_lowmass/"
+target_folder_low_mass = "tables_Nguyen_lowmass_fixed/"
 
 # Target folder for high mass tables
 target_folder_high_mass = "/home/marco/Desktop/sevn/tables/SEVNtracks_parsec_ov05_AGB/"
