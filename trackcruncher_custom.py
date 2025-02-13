@@ -97,7 +97,7 @@ for subfolder in os.listdir(target_folder):
     if os.path.isdir(subfolder_path):
         new_name = next((part[1:].replace('.', '') for part in subfolder.split('_') if part.startswith('Z')), None) # change to a sevn table compatible name
 
-        if new_name in {'0017', '001', '0006'}:                                                                                                                     # CHANGE THIS IS TEMPORARY!!
+        if new_name in {'0017'}:                                                                                                                     # CHANGE THIS IS TEMPORARY!!
 
             new_subfolder_path = os.path.join(output_folder, new_name)
             if os.path.exists(new_subfolder_path):
@@ -172,7 +172,7 @@ for subfolder in os.listdir(target_folder):
                     phase_firstline = df.drop_duplicates(subset="phase", keep="first")
                     with open(file_path, "a") as f:
                         for _, row in phase_firstline.iterrows():
-                            f.write(f"{int(row['phase'])}   {row['age']/1e6:.8e}   ")
+                            f.write(f"{row['age']/1e6:.8e}   {int(row['phase'])}   ")
                         f.write("\n")
 
                     # FILTER LINES 2
